@@ -2,6 +2,7 @@ import "../src/index.css";
 import "../src/App.css";
 import Navbar from "../src/components/Navbar";
 import SmoothScroll from "../src/components/SmoothScroll";
+import Events from "../src/components/Events";
 
 export const metadata = {
   title: "tmp-app",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <SmoothScroll>
           <div className="app-container">
             <Navbar />
+            <Events />
             {children}
           </div>
         </SmoothScroll>

@@ -464,127 +464,6 @@ h6 {
   color: rgba(255, 255, 255, 0.3);
   font-size: 0.85rem;
 }
-/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/components/GooeyNav.css ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************/
-.gooey-nav-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 5vw;
-  z-index: 100;
-  pointer-events: none; 
-}
-
-
-.gooey-filter {
-  position: absolute;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-}
-
-.gooey-nav {
-  pointer-events: auto;
-  background: rgba(20, 20, 20, 0.4);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  padding: 0.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.nav-items-wrapper {
-  display: flex;
-  position: relative;
-}
-
-.nav-item {
-  position: relative;
-  background: transparent;
-  border: none;
-  color: #fff; 
-  font-family: 'Outfit', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.8rem 1.5rem;
-  cursor: pointer;
-  z-index: 2;
-  transition: color 0.3s ease;
-  border-radius: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.nav-item:hover {
-  color: #fff;
-}
-
-.nav-item.active {
-  color: #000;
-}
-
-
-.nav-indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #fff;
-  border-radius: 30px;
-  z-index: 1; 
-}
-
-
-.nav-right {
-  pointer-events: auto;
-}
-
-.nav-registration-btn {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 0.8rem 1.8rem;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
-  text-transform: uppercase;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.nav-registration-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.nav-registration-btn:hover {
-  color: #000;
-}
-
-.nav-registration-btn:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
 /*!*********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/App.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************/
@@ -773,5 +652,126 @@ h6 {
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/components/GooeyNav.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+.gooey-nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5vw;
+  z-index: 100;
+  pointer-events: none; 
+}
+
+
+.gooey-filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.gooey-nav {
+  pointer-events: auto;
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav-items-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.nav-item {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #fff; 
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-item:hover {
+  color: #fff;
+}
+
+.nav-item.active {
+  color: #000;
+}
+
+
+.nav-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 30px;
+  z-index: 1; 
+}
+
+
+.nav-right {
+  pointer-events: auto;
+}
+
+.nav-registration-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-registration-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-registration-btn:hover {
+  color: #000;
+}
+
+.nav-registration-btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
