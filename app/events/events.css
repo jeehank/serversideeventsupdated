@@ -125,15 +125,16 @@
   box-shadow: 0 0 10px rgba(120, 180, 255, 0.1);
 }
 
-.submit-container {
+.event-card-actions {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 1.5rem;
 }
 
-.final-register-btn {
-  padding: 1rem 3rem;
-  font-size: 1.25rem;
+.event-register-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -142,18 +143,18 @@
   border: 1px solid rgba(120, 180, 255, 0.5);
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(120, 180, 255, 0.2);
+  box-shadow: 0 5px 20px rgba(120, 180, 255, 0.15);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
 
-.final-register-btn:hover {
+.event-register-btn:hover {
   transform: translateY(-3px);
   background: linear-gradient(135deg, rgba(120, 180, 255, 0.4), rgba(60, 120, 255, 0.4));
-  box-shadow: 0 15px 40px rgba(120, 180, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(120, 180, 255, 0.25);
   border-color: rgba(120, 180, 255, 0.8);
 }
 
-.final-register-btn:active {
+.event-register-btn:active {
   transform: translateY(0);
 }
