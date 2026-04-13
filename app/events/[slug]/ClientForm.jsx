@@ -1,23 +1,31 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { registerEvent } from "../../actions/events";
 
-export default function ClientForm({ event, slug }) {
-  const handleRegister = (e) => {
+export default function ClientForm({ event }) {
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleRegister = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError(null);
     const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-    console.log("Local Data for", event.name, ":", data);
+    const response = await registerEvent(formData);
     
-    
-    localStorage.setItem(`registration-${slug}`, JSON.stringify({
-        event: event.name,
-        participantsData: data
-    }));
-    alert(`Registration data for ${event.name} saved locally! It has been successfully transferred.`);
+    if (response?.error) {
+      setError(response.error);
+      setLoading(false);
+    }
   };
 
   return (
     <form className="event-card" onSubmit={handleRegister} style={{ width: '100%' }}>
+      <input type="hidden" name="eventName" value={event.name} />
+      <input type="hidden" name="numParticipants" value={event.participants} />
+      
+      {error && <div style={{ color: '#ff6b6b', marginBottom: '1rem', background: '#2a1215', padding: '10px', borderRadius: '5px' }}>{error}</div>}
+
       <div className="event-inputs-group">
         {Array.from({ length: event.participants }).map((_, i) => (
           <div key={i} className="participant-block">
@@ -25,7 +33,7 @@ export default function ClientForm({ event, slug }) {
 
             <input
               type="text"
-              name={`${slug}-p${i + 1}-name`}
+              name={`p${i + 1}-name`}
               placeholder="Name"
               className="participant-input"
               required
@@ -33,7 +41,7 @@ export default function ClientForm({ event, slug }) {
 
             <input
               type="text"
-              name={`${slug}-p${i + 1}-class`}
+              name={`p${i + 1}-class`}
               placeholder="Class"
               className="participant-input"
               required
@@ -41,7 +49,7 @@ export default function ClientForm({ event, slug }) {
 
             <input
               type="tel"
-              name={`${slug}-p${i + 1}-contact`}
+              name={`p${i + 1}-contact`}
               placeholder="Contact Number"
               className="participant-input"
               required
@@ -51,8 +59,8 @@ export default function ClientForm({ event, slug }) {
       </div>
 
       <div className="event-card-actions">
-        <button type="submit" className="event-register-btn" style={{ width: '100%' }}>
-          Register for {event.name}
+        <button type="submit" className="event-register-btn" disabled={loading} style={{ width: '100%', opacity: loading ? 0.7 : 1 }}>
+          {loading ? "Registering..." : `Register for ${event.name}`}
         </button>
       </div>
     </form>

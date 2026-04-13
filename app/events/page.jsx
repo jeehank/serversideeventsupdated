@@ -7,12 +7,21 @@ export const metadata = {
 };
 
 import { eventsOnline, eventsDay1, eventsDay2 } from "./data";
-
+import Link from "next/link";
+import { logout } from "../actions/auth";
 export default function EventsPage() {
 
   return (
     <div className="events-container">
-      <h1 className="events-title">Events</h1>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+        <h1 className="events-title" style={{ margin: 0 }}>Events</h1>
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <Link href="/portal" style={{ color: '#eab308', textDecoration: 'none', fontWeight: 'bold' }}>My Registrations</Link>
+          <form action={logout}>
+            <button type="submit" style={{ background: 'transparent', color: '#ff6b6b', border: '1px solid #ff6b6b', padding: '0.4rem 0.8rem', borderRadius: '5px', cursor: 'pointer' }}>Logout</button>
+          </form>
+        </div>
+      </div>
 
       <div className="events-form-wrapper">
 
