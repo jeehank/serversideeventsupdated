@@ -5,8 +5,8 @@ import SmoothScroll from "../src/components/SmoothScroll";
 import Events from "../src/components/Events";
 
 export const metadata = {
-  title: "tmp-app",
-  description: "Next.js Migration",
+  title: "X-Celsior'26",
+  description: "St. Xavier's Collegiate School Technology Festival",
 };
 
 export default function RootLayout({ children }) {

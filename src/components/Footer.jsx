@@ -19,7 +19,7 @@ export default function Footer() {
       ease: "power2.out",
       scrollTrigger: {
         trigger: footerRef.current,
-        start: "top 90%", 
+        start: "top 90%",
         toggleActions: "play none none reverse"
       }
     });
@@ -39,7 +39,7 @@ export default function Footer() {
           <h3 className="footer-contact-title">Contact Us</h3>
           <div className="footer-contacts">
             <p>Debarpon Mukherjee: +91 84205 64720</p>
-            <p>Jeehan Karanjai: 82748 69581</p>
+            <p>Jeehan Karanjai: +91 82748 69581</p>
           </div>
         </div>
       </div>

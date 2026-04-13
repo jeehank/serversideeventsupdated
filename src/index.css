@@ -461,3 +461,35 @@ h6 {
   color: rgba(255, 255, 255, 0.3);
   font-size: 0.85rem;
 }
+
+/* Global Mobile Adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    overflow-x: hidden;
+  }
+  body {
+    font-size: 14px;
+  }
+  section, .about-section, .team-section, .footer-section {
+    padding: 2rem 1rem !important;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+  .about-row, .footer-content {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .sponsors-track {
+    gap: 5vw;
+    padding: 0 10vw;
+  }
+  .sponsor-card {
+    width: clamp(200px, 60vw, 300px);
+  }
+  .giant-scroll-text {
+    font-size: clamp(3rem, 15vw, 6rem);
+  }
+}
